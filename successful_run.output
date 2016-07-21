@@ -1,0 +1,379 @@
+SQL> @'C:\Users\egates\Documents\Personal\EmpireState\Database Systems\Module3a_Single_Script_Create_Load_Report.sql'
+Building tables. Please wait.
+
+Session altered.
+
+
+Session altered.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Student Status Report                                                                                                                                                                                                                           
+Student                        Current Enrollment S Years Enrolled  Academic Advisor                                                                                                                                                            
+------------------------------ -------------------- --------------- --------------------                                                                                                                                                        
+Alcott, Louisa Mae             Full-Time            5               Graham, Martha                                                                                                                                                              
+Asimov, Isaac                  Part-Time            3               Baryshinokov, Mikhai                                                                                                                                                        
+Bronte, Emily                  Withdrawn            1               Robbins, Jerome                                                                                                                                                             
+cummings, ee                   Full-Time            7               Mitchell, Arthur                                                                                                                                                            
+Eliot, Thomas Sterns           On Leave             5               Jooss, Kir                                                                                                                                                                  
+Shelly, Mary Wollstonecraft    On Leave             3               Mitchell, Arthur                                                                                                                                                            
+Singer, Isaac Bashevis         Full-Time            4               Nureyev, Rudolf                                                                                                                                                             
+Vonnegut, Kurt                 Part-Time            2               Astaire, Fred                                                                                                                                                               
+Walker, Alice                  Full-Time            4               Astaire, Fred                                                                                                                                                               
+
+9 rows selected.
+
+
+Thesis Committee Report                                                                                                 
+Student                        Thesis title                               Thesis advisor       Thesis committee members 
+------------------------------ ------------------------------------------ -------------------- -------------------------
+Alcott, Louisa Mae             Little Women                               Holm, Hayna          Graham, Martha           
+                                                                                               Baryshinokov, Mikhail    
+                                                                                               Astaire, Fred            
+                                                                                               Kelly, Gene              
+Asimov, Isaac                  I, Robot                                   Jooss, Kir           Nureyev, Rudolf          
+                                                                                               Graham, Martha           
+                                                                                               de Mille, Agnes          
+                                                                                               Robbins, Jerome          
+Eliot, Thomas Sterns           Is 5                                       Alonso, Alicia       Dunham, Katherine        
+                                                                                               Fonteyn, Dame Margot     
+                                                                                               Nureyev, Rudolf          
+                                                                                               Vestris, Gaetano         
+Shelly, Mary Wollstonecraft    Frankenstein, or the Modern Prometheus     Mitchell, Arthur     Astaire, Fred            
+                                                                                               Baryshinokov, Mikhail    
+                                                                                               Pavlova, Anna Matveyevna 
+                                                                                               Robinson, Bill (Bojangles
+
+16 rows selected.
+
+SP2-0042: unknown command "" - rest of line ignored.
+SQL> spool off

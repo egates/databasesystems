@@ -1,0 +1,93 @@
+/************************************/
+/* Document: constraint_testing.rtf */
+/* Author: Eric Gates  */
+/* Date Created: 10-JUL-2017 */
+/* Last Updated: 16-JUL-2017/Eric Gates */
+/* Requested By: Benjamin Fruchter SUNY Empire State College */
+/* Purpose: */
+/* explain the data used to test constraints*/
+/* I/O: None */
+/************************************/
+
+Data used to test constraints included data from Ivey Part I and Ivey Part II sample reports is listed below.
+Its really just a serious of inserts that will generate error messages to prove that the
+primary key unique contraints, not null constraints and foreign key contraints all work as expected.
+Based on these tests, they all work fine.
+
+select * from PROGRAMENROLLMENT;
+--FULL already exists
+insert into PROGRAMENROLLMENT VALUES('FULL','Full time');
+--can't be null
+insert into PROGRAMENROLLMENT VALUES('','Invisible');
+
+select * from person;
+--10001 exists
+insert into person values('10001','Mick','E','Mouse','','');
+--can't be null
+insert into person values('','Mick','E','Mouse','','');
+
+select * from faculty;
+--exists
+insert into faculty values('10018');
+--no nulls
+insert into faculty values('');
+--FK violation - does not exist in person
+insert into faculty values('100919');
+
+select * from student;
+--exists
+insert into student values('20001','1 Main','City','NY',11111,'Pete','','01-JUN-2016','','FULL','');
+--enrolldate can't be null
+insert into student values('20001','1 Main','City','NY',11111,'Pete','','','','','');
+--enrollmentstatusid can't be null
+insert into student values('20001','1 Main','City','NY',11111,'Pete','','01-JUN-2016','','','');
+--enrollmentstatusid FK violation - does not exist in programenrollment
+insert into student values('20101','1 Main','City','NY',11111,'Pete','','01-JUN-2016','','NEW','');
+--studentnumber FK violation - does not exist in person
+insert into student values('20101','1 Main','City','NY',11111,'Pete','','01-JUN-2016','','FULL','');
+--adademic advisor FK constraint violation - does not exist in faculty
+insert into person values('20102','John','E','Cash','','');
+insert into student values('20102','1 Main','City','NY',11111,'Pete','','01-JUN-2016','','FULL','100500');
+
+select * from course;
+--1000 already exists
+insert into course values(1000,'702','Moose Hunting','','');
+--no nulls
+insert into course values(null,'702','Moose Hunting','','');
+insert into course values(1007,'','Moose Hunting','','');
+insert into course values(1007,'702','','','');
+--FK violation - facultyid does not exist
+insert into course values(1007,'702','Moose Hunting','','100002');
+
+select * from courseenrollment;
+--3000 already exists
+insert into courseenrollment values('3000','Waived','20002',1000);
+--no nulls
+insert into courseenrollment values('','Waived','20002',1000);
+--fk violation studentnumber does not exist
+insert into courseenrollment values('3010','Waived','200002',1000);
+--fk violation courseid does not exist
+insert into courseenrollment values('30!0','Waived','20002',2000);
+
+select * from thesis;
+--no dup thesisid
+insert into thesis values ('THESIS1002','10018','20001','Moose','No');
+-- thesis id can't be null
+insert into thesis values ('','10018','20001','Moose','No');
+-- student can't be null
+insert into thesis values ('THESIS1006','10018','','Moose','No');
+-- int'l content can't be null
+insert into thesis values ('THESIS1006','10018','20001','Moose','');
+--fk violation for faculty does not exist
+insert into thesis values ('THESIS1006','100018','20001','Moose','No');
+--fk vioaltion for student does not exist
+insert into thesis values ('THESIS1006','10018','200001','Moose','No');
+
+select * from committeemember;
+-- np nulls for thesisid or facultid
+insert into committeemember values ('','10010','No');
+insert into committeemember values ('THESIS1002','','No');
+--fk violations
+insert into committeemember values ('THESIS8002','10010','No');
+insert into committeemember values ('THESIS1002','100010','No');
+
